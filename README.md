@@ -38,7 +38,7 @@ electron-packager --icon img/icons.icns --overwrite .
 
 # Screenshots
 Library view:
-_later_
+![Library](img/library.png?raw=true "Player")
 
 Player view:
 ![Player](img/player.png?raw=true "Player")
