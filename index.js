@@ -57,7 +57,7 @@ function saveConfig()
     storage.set('config', config, function(error) {
       if (error) throw error;
     });
-    //init();
+    init();
 }
 function loadConfig()
 {
@@ -172,6 +172,7 @@ setInterval(function () {
 
 //Start
 loadConfig();
+loadInteractions();
 
 //Drow Pages
 function createLiberyPage(audiobooks)
