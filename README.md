@@ -36,6 +36,9 @@ Create for the current Platform
 electron-packager --icon img/icons.icns --overwrite .
 ```
 
+Create a dmg file for mac:
+http://stackoverflow.com/questions/37292756/how-to-create-a-dmg-file-for-a-app-for-mac
+
 # Screenshots
 Library view:
 ![Library](img/library.png?raw=true "Player")
