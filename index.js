@@ -7,9 +7,11 @@ var glob = require("glob")
 var config = {
     "path":"",
     "audiobooks": [
-        "name": "test",
-        "currentTrack": 0,
-        "currentPos": 0
+        {
+            "name": "test",
+            "currentTrack": 0,
+            "currentPos": 0
+        }
     ]
 };
 

@@ -30,6 +30,12 @@ Click at the "Change Library Folder" Button and select the "mainfolder" folder. 
 
 The position will be saved so you can close the app and restart later.
 
+# Build Packages
+Create for the current Platform
+```
+electron-packager --icon img/icons.icns --overwrite .
+```
+
 # Screenshots
 Library view:
 _later_
