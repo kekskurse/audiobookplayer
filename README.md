@@ -30,6 +30,9 @@ Click at the "Change Library Folder" Button and select the "mainfolder" folder. 
 
 The position will be saved so you can close the app and restart later.
 
-# Player
+# Screenshots
+Library view:
+_later_
 
+Player view:
 ![Player](img/player.png?raw=true "Player")
