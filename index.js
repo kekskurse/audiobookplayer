@@ -178,7 +178,7 @@ function createLiberyPage(audiobooks)
     for(var i = 0; i < audiobooks.length; i++)
     {
         html = html + '<div class="col-xs-4 col-md-3 libclick" data-name="'+audiobooks[i]+'"><a href="#" class="thumbnail">';
-        html = html +'<img style="width:100%;max-height:200px;" src="http://img.docker.kekskurse.de/img.php?q=audiobook '+audiobooks[i]+'" alt="...">';
+        html = html +'<img style="width:100%;max-height:200px;" src="http://img.docker.kekskurse.de/img.php?q=audiobook '+audiobooks[i]+'" alt="'+audiobooks[i]+'">';
         html = html + '</a></div>';
     }
     html = html + "</div>";
