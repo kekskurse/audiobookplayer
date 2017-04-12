@@ -20,7 +20,7 @@
     #playRow{
         position: absolute;
         bottom: 0px;
-        height: 100px;
+        height: 60px;
         width: 100%;
         margin: 0px;
         padding:0px;
@@ -30,7 +30,7 @@
     }
     #library{
         position: absolute;
-        height: calc(100% - 100px);
+        height: calc(100% - 60px);
         top: 0px;
         width:98%;
         left:1%;
@@ -43,16 +43,15 @@
     #player{
         display:none;
         position: absolute;
-        height: calc(100% - 100px);
+        height: calc(100% - 60px);
         overflow: scroll;
         width: 100%;
-        text-align: center;
         padding: 5px;
 
     }
     .playing
     {
-        background-color: red;
+        background-color: #ecf0f1;
     }
     </style>
 </header>
@@ -63,6 +62,7 @@
         <button type="button" class="btn btn-default" id="addBTN">Change Library Folder</button>
     </div>
     <div id="player">
+        <a href="#" style="width:100%;margin-bottom:20px;margin-top:10px;" class="btn btn-default btn-sm backToLibrary">Back to Library</a>
         <div id="playerView">
         </div>
     </div>
@@ -78,7 +78,6 @@
           <source src="horse.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>
-<i id="currentTrack"></i>
     </div>
     <script src="index.js" language="javascript"></script>
     <script>

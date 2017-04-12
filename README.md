@@ -29,3 +29,7 @@ npm start
 Click at the "Change Library Folder" Button and select the "mainfolder" folder. Than click on a Cover. Listen to the Audiobook.
 
 The position will be saved so you can close the app and restart later.
+
+# Player
+
+![Player](img/player.png?raw=true "Player")

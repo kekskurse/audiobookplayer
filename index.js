@@ -43,6 +43,10 @@ function loadInteractions() {
         currentTrack = $(this).attr("data-track");
         playTrack(0);
     });
+    $(".backToLibrary").bind("click", function () {
+        $("#library").show();
+        $("#player").hide();
+    });
 };
 
 //Functions
@@ -113,7 +117,10 @@ function loadAudio(name)
 }
 function playTrack(startpos = 0)
 {
-    $(".playing").each(function(obj){
+    $(".playing").each(function(index, obj){
+        console.log("REMOVE PLAYING");
+        console.log(index);
+        console.log(obj);
         $(obj).removeClass("playing");
     });
     $("#track_"+currentTrack).addClass("playing");
@@ -181,10 +188,10 @@ function createLiberyPage(audiobooks)
 
 function createAudiobookPage(playlist, name)
 {
-    var html = "<table class='table' style='font-size:8px;'>";
+    var html = "<table class='table' style='font-size:10px;'>";
     for(var i = 0; i < playlist.length; i++)
     {
-        html = html + "<tr class='play' data-name='"+name+"' id='track_"+i+"'><td><a href='#' data-track='"+i+"' class='playTrack'>[>]</a>"+playlist[i]+"</td></tr>";
+        html = html + "<tr class='play' data-name='"+name+"' id='track_"+i+"'><td><a href='#' class='btn btn-default btn-sm' data-track='"+i+"' class='playTrack'><i class='fa fa-play' aria-hidden='true'></i></a> "+playlist[i]+"</td></tr>";
     }
     html = html + "</table>";
     $("#playerView").html(html);
