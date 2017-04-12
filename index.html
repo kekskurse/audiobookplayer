@@ -1,0 +1,93 @@
+<header>
+    <title>Audiobook Player</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script>if (window.module) module = window.module;</script>
+    <style type="text/css">
+    body
+    {
+        margin: 0px;
+        padding:0px;
+    }
+    #playRow{
+        position: absolute;
+        bottom: 0px;
+        height: 100px;
+        width: 100%;
+        margin: 0px;
+        padding:0px;
+        text-align: center;
+        padding-top:20px;
+        /*border-top: 1px solid black;*/
+    }
+    #library{
+        position: absolute;
+        height: calc(100% - 100px);
+        top: 0px;
+        width:98%;
+        left:1%;
+        /*border-right: 1px solid black;*/
+        padding-top: 5px;
+        padding-right: 5px;
+        padding-left: 5px;
+        text-align: center;
+    }
+    #player{
+        display:none;
+        position: absolute;
+        height: calc(100% - 100px);
+        overflow: scroll;
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+
+    }
+    .playing
+    {
+        background-color: red;
+    }
+    </style>
+</header>
+
+<body>
+    <div id="library">
+        <div id="libraryView"></div>
+        <button type="button" class="btn btn-default" id="addBTN">Change Library Folder</button>
+    </div>
+    <div id="player">
+        <div id="playerView">
+        </div>
+    </div>
+    <div id="playRow">
+        <!--<div class="btn-group btn-group-lg" role="group" aria-label="...">
+          <button type="button" class="btn btn-default"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-play" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-stop" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-default"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+      </div>!-->
+        <audio controls id="audiobookPlayerElement" style="width:100%;">
+          <source src="horse.ogg" type="audio/ogg">
+          <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+<i id="currentTrack"></i>
+    </div>
+    <script src="index.js" language="javascript"></script>
+    <script>
+    $("#addBTN").click(function() {
+        const electron = require('electron')
+        var dialog = electron.remote.dialog;
+        dialog.showOpenDialog({properties: ['openDirectory']},function(res) {
+            console.log(res);
+        });
+    });
+    </Script>
+</body>
