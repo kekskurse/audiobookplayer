@@ -1,4 +1,4 @@
-I want to listen to Audobooks with my Mac. I have all Audiobooks in one Folder and as mp3 Files. So i wrote the following electron gui to play them (in realy ugly, just want it to work).
+I want to listen to Audiobooks with my Mac. I have all Audiobooks in one Folder and as mp3 Files. So i wrote the following electron gui to play them (in realy ugly, just want it to work).
 
 # Use it
 Make sure you have the following folder Structure:

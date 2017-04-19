@@ -57,7 +57,6 @@ function saveConfig()
     storage.set('config', config, function(error) {
       if (error) throw error;
     });
-    init();
 }
 function loadConfig()
 {
