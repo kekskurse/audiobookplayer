@@ -193,7 +193,7 @@ function createAudiobookPage(playlist, name)
     var html = "<table class='table' style='font-size:10px;'>";
     for(var i = 0; i < playlist.length; i++)
     {
-        html = html + "<tr class='play' data-name='"+name+"' id='track_"+i+"'><td><a href='#' class='btn btn-default btn-sm' data-track='"+i+"' class='playTrack'><i class='fa fa-play' aria-hidden='true'></i></a> "+playlist[i]+"</td></tr>";
+        html = html + "<tr class='play' data-name='"+name+"' id='track_"+i+"'><td><a href='#' class='btn btn-default btn-sm playTrack' data-track='"+i+"'><i class='fa fa-play' aria-hidden='true'></i></a> "+playlist[i]+"</td></tr>";
     }
     html = html + "</table>";
     $("#playerView").html(html);
