@@ -138,6 +138,7 @@ function calculateAlbumLenght(id)
         getDirectories(config.path+"/"+_audiobook, function (err, res) {
             _trackcount = res.length;
             config.audiobooks[_id].trackCount = _trackcount;
+            config.audiobooks[_id].duration = 0;
             for(var g=0;g<res.length;g++)
             {
                 mp3Duration(res[g], function (err, duration) {
@@ -147,6 +148,7 @@ function calculateAlbumLenght(id)
                     _doneTracks++;
                     if(_doneTracks == _trackcount)
                     {
+                        saveConfig();
                         fulfill();
                     }
                 });
