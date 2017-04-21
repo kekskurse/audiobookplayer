@@ -159,7 +159,7 @@ function allAlbumLength(i = 0)
     var next = i + 1;
     if(config.audiobooks[i]!=undefined)
     {
-        if(true)//config.audiobooks[i].duration == undefined)
+        if(config.audiobooks[i].duration == undefined)
         {
             var r = calculateAlbumLenght(i);
             r.then(function() {
